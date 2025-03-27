@@ -1,0 +1,145 @@
+/* Post filtering styles */
+.feed-shared-update-v2.hidden,
+.feed-shared-article.hidden,
+.feed-shared-external-video.hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+.feed-shared-update-v2.processing,
+.feed-shared-article.processing,
+.feed-shared-external-video.processing {
+    opacity: 0.1 !important;
+    transition: opacity 0.2s ease-in-out !important;
+}
+
+/* Voting System Styles */
+.hot-vote-buttons {
+    padding: 12px 16px;
+    margin-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.vote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.6);
+    padding: 6px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-width: 120px;
+    height: 32px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.vote-btn:hover {
+    background: #f3f6f8;
+    border-color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.vote-btn:active {
+    transform: translateY(1px);
+}
+
+.vote-btn.hot-take {
+    border-color: #057642;
+    color: #057642;
+}
+
+.vote-btn.hot-take:hover {
+    background: rgba(5, 118, 66, 0.08);
+}
+
+.vote-btn.hot-turd {
+    border-color: #b24020;
+    color: #b24020;
+}
+
+.vote-btn.hot-turd:hover {
+    background: rgba(178, 64, 32, 0.08);
+}
+
+.vote-result {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    padding: 6px 12px;
+    background: #f3f6f8;
+    border-radius: 16px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.vote-result strong {
+    margin-left: 4px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Loading indicator styles */
+.linkedless-toast {
+    position: fixed;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 102, 194, 0.95);
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000;
+    opacity: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+    animation: toastIn 0.3s ease forwards, toastOut 0.3s ease forwards 2.5s;
+    pointer-events: none;
+}
+
+.linkedless-toast .dots {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.linkedless-toast .dots::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+    display: inline-block;
+    width: 20px;
+    text-align: left;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+@keyframes toastIn {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes toastOut {
+    from { opacity: 1; transform: translate(-50%, 0); }
+    to { opacity: 0; transform: translate(-50%, -10px); }
+} 

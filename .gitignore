@@ -1,0 +1,21 @@
+# Chrome Extension specific
+*.crx
+*.pem
+*.zip
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node specific
+node_modules/
+package-lock.json
+
+# Logs
+*.log 

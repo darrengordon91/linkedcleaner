@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedLess Cleaner",
+    "version": "1.5",
+    "description": "Take control of your LinkedIn feed. Hide ads, suggested posts, reactions, and clutter—plus vote on content quality.",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://www.linkedin.com/feed/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.linkedin.com/feed/*"],
+            "js": ["content.js"],
+            "css": ["content.css"],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["popup.css", "content.css", "gifs/mr_hanky.gif"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

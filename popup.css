@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    width: 320px; /* Expanded for a better layout */
+    padding: 15px;
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #0073b1; /* LinkedIn Blue */
+    margin-bottom: 15px;
+}
+
+/* Toggle Section */
+.toggle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Toggle Switch */
+.toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ececec;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-slider {
+    width: 40px;
+    height: 20px;
+    background: gray;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+/* Toggle Active */
+input:checked + .toggle-slider {
+    background: #0073b1;
+}
+
+input:checked + .toggle-slider::before {
+    transform: translateX(20px);
+}
+
+/* Time Filter */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ececec;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Save & Refresh Button */
+.save-button {
+    width: 100%;
+    background: #0073b1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: #005682;
+}
+
+/* Feedback Section */
+.feedback-section h2 {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+textarea, input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.feedback-button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.feedback-button:hover {
+    background: #218838;
+}
+
+/* Support Section */
+.support-section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.support-button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.support-button:hover {
+    background: #e68900;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedLess Cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedLess Cleaner</h1>
+        <span id="pluginBadge" style="display:none; background:#28a745; color:white; font-size:12px; padding:4px 8px; border-radius:4px; font-weight:bold;">
+            PLUGIN ACTIVE
+          </span>
+          
+
+        <div class="toggle-section">
+            <label class="toggle-label">Hide 'likes this' posts
+                <input type="checkbox" id="hide_likes">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <label class="toggle-label">Hide 'reposted this' posts
+                <input type="checkbox" id="hide_reposts">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <label class="toggle-label">Hide 'commented on this' posts
+                <input type="checkbox" id="hide_comments">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <label class="toggle-label">Hide Suggested posts
+                <input type="checkbox" id="hide_suggested">
+                <span class="toggle-slider"></span>
+            </label>
+
+            <label class="toggle-label">Hide Promoted posts
+                <input type="checkbox" id="hide_prompted">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="filter-section">
+            <label for="time_filter">Filter by Time</label>
+            <select id="time_filter">
+                <option value="1w">1 Week</option>
+                <option value="2w" selected>2 Weeks</option>
+                <option value="1m">1 Month</option>
+            </select>
+        </div>
+
+        <button id="save-settings" class="save-button">
+            💾 Save & Refresh
+        </button>
+
+        <div class="feedback-section">
+            <h2>Submit Feedback</h2>
+            <textarea id="feedback" placeholder="Your feedback..."></textarea>
+            <input type="email" id="email" placeholder="Your email (optional)">
+            <button id="submit-feedback" class="feedback-button">💬 Submit Feedback</button>
+        </div>
+
+        <div class="support-section">
+            <h2>Support Me</h2>
+            <p>Help me build more</p>
+            <button id="support-button" class="support-button">☕ Buy Me a Coffee</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
